@@ -12,6 +12,6 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 COPY ./bin/docker_entrypoint.sh /docker_entrypoint.sh
 COPY ./ /chroma
 
-EXPOSE 8000
+EXPOSE 8100
 
 CMD ["/docker_entrypoint.sh"]
