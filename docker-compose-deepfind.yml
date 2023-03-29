@@ -17,7 +17,7 @@ services:
       - ./config/backup_disk.xml:/etc/clickhouse-server/config.d/backup_disk.xml
       - ./config/chroma_users.xml:/etc/clickhouse-server/users.d/chroma.xml
     networks:
-      - nlp-lab
+      - deepfind
 
   chroma:
     build:
@@ -36,11 +36,11 @@ services:
     depends_on:
       - clickhouse
     networks:
-      - nlp-lab
+      - deepfind
 
 networks:
-  nlp-lab:
-    name: nlp-lab
+  deepfind:
+    name: deepfind
     driver: bridge
 
 volumes:
